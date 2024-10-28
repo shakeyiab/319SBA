@@ -1,6 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv'
 import bodyParser from 'body-parser';
+import db from '../db/conn.mjs';
 
 
 // Initialize express into a variable
@@ -30,6 +31,7 @@ router.get('/', (req, res) => {
   })
 
 
+//
 
 
 
