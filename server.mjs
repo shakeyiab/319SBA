@@ -11,12 +11,29 @@ const PORT = 3000;
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json({extended: true}));
+//Use at least three different data collections within the database (such as users, posts, or comments).
+//Create GET routes for all data that should be exposed to the client, 
+//using appropriate query commands to retrieve the data from the database.
 
-//Routes - order of routes is most specific --> least specific
-//first arg is path - always in quotes
-app.get('/', (req, res) => { 
-  res.send(`<h1>Hello World</h1>`);
-});
+// get all teams 
+router.get('/', (req, res) => {
+    res.json(teams);
+
+  })
+  //// get all favteams
+  router.get('/', (req, res) => {
+    res.json(favTeams);
+  })
+  // get all scores
+   router.get('/', (req, res) => {
+    res.json(scores);
+  })
+
+
+
+
+
+
 
 //App.listen should ALWAYS be the last thing in your server
 app.listen(PORT, () => {

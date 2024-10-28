@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 //Create connection string
-let connectionString = process.env.atlasURI || 'mongodb+srv://shakeyiabartell:<db_password>@cluster0.yahrf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+let connectionString = process.env.atlasURI || 'mongodb+srv://shakeyiabartell:<Jaliyah1!>@cluster0.yahrf.mongodb.net/';
 
 const client = new MongoClient(connectionString);
 
@@ -19,6 +19,6 @@ try {
   console.error(err);
 }
 
-let db = conn.db('sample_training');
+let db = conn.db('');
 
 export default db;
