@@ -14,3 +14,20 @@ router.teams('/', (req, res) => {
       res.json(teams[teams.length - 1]);
     }  
   });
+  //Create DELETE routes for data, as appropriate, using appropriate delete commands to remove data from the database. 
+  //At least one data collection should allow for client deletion via a DELETE request.
+  router.delete('/:id', (req, res) => {
+    const post = posts.find((t, i) => {
+      if (t.id == req.params.id) {
+        teams.splice(i, 1);
+        return true;
+      }
+    });
+  
+    if (teams) res.json(teams);
+    else next();
+  });
+  
+
+
+    export default router;
